@@ -14,13 +14,14 @@ public class Test {
 		Connexion conexion = new Connexion();
 		
 		Cliente cliente = new Cliente("Pablo","Miranda",39000075,new Domicilio("Bolonia",2528,new Localidad("Banfield","54645"),new Provincia("Buenos aires","4654")),new ObraSocial("Osde",54654));
-		Gson gson = new Gson();
-		String json = gson.toJson(cliente);
+		ObraSocial obraSocial = new ObraSocial("gonza",1123);
+		//		Gson gson = new Gson();
+//		String json = gson.toJson(cliente);
 		//System.out.println(json);
-		conexion.insert(json);
+		conexion.insert(cliente);
 		//conexion.actualizar("Roberto Carlos","Pablito Miranda");
 		//conexion.eliminar("Roberto Carlos");
-		conexion.mostrar();
+//		conexion.mostrar();
 		//serializeUserSimple();
 		
 		

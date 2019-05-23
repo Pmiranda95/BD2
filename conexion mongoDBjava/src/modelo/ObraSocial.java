@@ -2,12 +2,11 @@ package modelo;
 
 public class ObraSocial {
 
-    private int id;
-    private String nombre;
-    private int numeroAfiliado;
+    int _id;
+    String nombre;
+    int numeroAfiliado;
 
-    public ObraSocial(){};
-
+//    public ObraSocial(){};
 
     public ObraSocial(String nombre,int numeroAfiliado) {
         this.nombre=nombre;
@@ -15,11 +14,11 @@ public class ObraSocial {
     }
 
     public int getIdObraSocial() {
-        return id;
+        return _id;
     }
 
     public void setIdObraSocial(int idObraSocial) {
-        this.id = idObraSocial;
+        this._id = idObraSocial;
     }
 
     public String getNombre() {

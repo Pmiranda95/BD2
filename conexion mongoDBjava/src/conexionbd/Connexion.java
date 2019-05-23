@@ -7,6 +7,10 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
+import modelo.Cliente;
+import modelo.ObraSocial;
+import org.mongojack.JacksonDBCollection;
+import org.mongojack.WriteResult;
 
 public class Connexion {
 	DB BaseDatos;
@@ -24,9 +28,20 @@ public class Connexion {
 		}
 	}
 	
-	public boolean insert(String dato) {
-		Document.put("nombre", dato);
-		collection.insert(Document);
+	public boolean insert(Cliente dato) {
+
+		//magia que hace el insert
+		JacksonDBCollection<Cliente, String> coll = JacksonDBCollection.wrap(collection, Cliente.class, String.class);
+		Cliente myObject = dato;
+		WriteResult<Cliente, String> result = coll.insert(myObject);
+//		String id = result.getSavedId();
+//		Cliente savedObject = coll.findOneById(id);
+
+//		BasicDBObject basicDBObject = new BasicDBObject("cliente", dato);
+//		collection.save(basicDBObject);
+
+//		Document.put("nombre", dato);
+//		collection.insert(Document);
 		return true;
 	}
 	
