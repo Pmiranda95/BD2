@@ -4,5 +4,16 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/intel 2015/Desktop/universidad/4 año/bd 2/mongo-java-driver-2.9.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/intel 2015/Desktop/universidad/4 año/bd 2/gson-2.8.5.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/bson-3.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/bson4jackson-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/jackson-core-2.9.6.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/jackson-databind-2.9.6.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/jackson-datatype-jsr310-2.8.7.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/mongodb-driver-3.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/mongodb-driver-core-3.8.0.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/mongojack-2.10.0.jar"/>
+	<classpathentry kind="lib" path="D:/descargas/bd2/BD2/librerias a utilizar/mongojack_maven/persistence-api-1.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

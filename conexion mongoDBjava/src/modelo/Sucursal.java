@@ -8,19 +8,21 @@ public class Sucursal {
 
     private int id;
     private String nombre;
-    private Set<Empleado> empleados;
+    private List<Empleado> empleados;
     private Domicilio domicilio;
     private Empleado encargado;
     private Cadena cadena;
+    private List<Venta> ventas;
 
     public Sucursal(){};
 
-    public Sucursal(String nombre, Set<Empleado> empleados, Domicilio domicilio, Empleado encargado, Cadena cadena) {
+    public Sucursal(String nombre,Domicilio domicilio, Empleado encargado, Cadena cadena) {
         this.nombre = nombre;
-        this.empleados = empleados;
+        this.empleados =  new ArrayList<Empleado>();
         this.domicilio = domicilio;
         this.encargado = encargado;
         this.cadena = cadena;
+        this.ventas = new ArrayList<Venta>();
     }
 
     public int getId() {
@@ -39,15 +41,24 @@ public class Sucursal {
         this.nombre = nombre;
     }
 
-    public Set<Empleado> getEmpleados() {
-        return empleados;
-    }
+   
+    public List<Empleado> getEmpleados() {
+		return empleados;
+	}
 
-    public void setEmpleados(Set<Empleado> empleados) {
-        this.empleados = empleados;
-    }
+	public void setEmpleados(List<Empleado> empleados) {
+		this.empleados = empleados;
+	}
 
-    public Domicilio getDomicilio() {
+	public List<Venta> getVentas() {
+		return ventas;
+	}
+
+	public void setVentas(List<Venta> ventas) {
+		this.ventas = ventas;
+	}
+
+	public Domicilio getDomicilio() {
         return domicilio;
     }
 

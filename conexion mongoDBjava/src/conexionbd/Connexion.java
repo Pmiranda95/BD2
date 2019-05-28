@@ -9,8 +9,11 @@ import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import modelo.Cliente;
 import modelo.ObraSocial;
+import modelo.Sucursal;
+
 import org.mongojack.JacksonDBCollection;
 import org.mongojack.WriteResult;
+import org.omg.CORBA.Any;
 
 public class Connexion {
 	DB BaseDatos;
@@ -21,30 +24,30 @@ public class Connexion {
 		try {
 			Mongo mongo =  new Mongo("localhost",27017);
 			BaseDatos =mongo.getDB("admin");
-			collection = BaseDatos.getCollection("Cliente");
+			collection = BaseDatos.getCollection("Sucursal");
+			
 			System.out.println("conexion establecida");
 		} catch (Exception e) {
 			Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE,null,e);
 		}
 	}
 	
-	public boolean insert(Cliente dato) {
-
+	/*public boolean insert(Cliente dato) {
 		//magia que hace el insert
 		JacksonDBCollection<Cliente, String> coll = JacksonDBCollection.wrap(collection, Cliente.class, String.class);
 		Cliente myObject = dato;
 		WriteResult<Cliente, String> result = coll.insert(myObject);
-//		String id = result.getSavedId();
-//		Cliente savedObject = coll.findOneById(id);
-
-//		BasicDBObject basicDBObject = new BasicDBObject("cliente", dato);
-//		collection.save(basicDBObject);
-
-//		Document.put("nombre", dato);
-//		collection.insert(Document);
+		return true;
+	}*/
+	
+	
+	public boolean insert(Sucursal dato) {
+		//magia que hace el insert
+		JacksonDBCollection<Sucursal, String> coll = JacksonDBCollection.wrap(collection, Sucursal.class, String.class);
+		Sucursal myObject = dato;
+		WriteResult<Sucursal, String> result = coll.insert(myObject);
 		return true;
 	}
-	
 	public void mostrar() {
 		DBCursor cursor = collection.find();
 		while(cursor.hasNext()) {
