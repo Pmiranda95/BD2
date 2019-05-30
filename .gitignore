@@ -2,3 +2,6 @@
 archivos intelij
 .idea
 /mongoDBjava/bin/*
+mongoDBjava/bin/conexionbd/*
+mongoDBjava/conexion mongoDBjava.iml
+

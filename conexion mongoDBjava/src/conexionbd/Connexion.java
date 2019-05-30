@@ -32,13 +32,13 @@ public class Connexion {
 		}
 	}
 	
-	/*public boolean insert(Cliente dato) {
+	public boolean insert(Cliente dato) {
 		//magia que hace el insert
 		JacksonDBCollection<Cliente, String> coll = JacksonDBCollection.wrap(collection, Cliente.class, String.class);
 		Cliente myObject = dato;
 		WriteResult<Cliente, String> result = coll.insert(myObject);
 		return true;
-	}*/
+	}
 	
 	
 	public boolean insert(Sucursal dato) {
