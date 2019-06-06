@@ -5,11 +5,11 @@ public class Empleado {
     private String apellido;
     private String nombre;
     private int dni;
-    private int cuit;
+    private long cuit;
     private Domicilio domicilio;
     private ObraSocial obraSocial;
 
-    public Empleado(String apellido, String nombre, int dni, int cuit, Domicilio domicilio, ObraSocial obraSocial) {
+    public Empleado(String apellido, String nombre, int dni, long cuit, Domicilio domicilio, ObraSocial obraSocial) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.dni = dni;
@@ -50,11 +50,11 @@ public class Empleado {
         this.dni = dni;
     }
 
-    public int getCuit() {
+    public long getCuit() {
         return cuit;
     }
 
-    public void setCuit(int cuit) {
+    public void setCuit(long cuit) {
         this.cuit = cuit;
     }
 
