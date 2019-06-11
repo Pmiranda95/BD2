@@ -54,6 +54,7 @@ public class Connexion {
 			System.out.println(cursor.next());
 		}
 	}
+
 	
 	public boolean actualizar(String accionVieja, String accionNueva) {
 		Document.put("nombre", accionVieja);

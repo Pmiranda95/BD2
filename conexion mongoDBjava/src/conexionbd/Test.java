@@ -19,7 +19,7 @@ public class Test {
 		ObraSocial obraSocial = new ObraSocial("gonza",1123);
 		Empleado empleado = new Empleado("Miranda","Pablo",3900075,45454544,new Domicilio("Bolonia",2528,new Localidad("Banfield","54645"),new Provincia("Buenos aires","4654")),obraSocial);
 		Sucursal sucursal = new Sucursal("Roberto Gonzales",new Domicilio("Bolonia",2528,new Localidad("Banfield","54645"),new Provincia("Buenos aires","4654")),empleado,new Cadena("garbaritno"));
-		conexion.insert(sucursal);
+		//conexion.insert(sucursal);
 		
 		conexion.mostrar();
 	}
