@@ -8,6 +8,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import modelo.Cliente;
+import modelo.Empleado;
 import modelo.ObraSocial;
 import modelo.Sucursal;
 
@@ -32,13 +33,13 @@ public class Connexion {
 		}
 	}
 	
-	/*public boolean insert(Cliente dato) {
+	public boolean insert(Cliente dato) {
 		//magia que hace el insert
 		JacksonDBCollection<Cliente, String> coll = JacksonDBCollection.wrap(collection, Cliente.class, String.class);
 		Cliente myObject = dato;
 		WriteResult<Cliente, String> result = coll.insert(myObject);
 		return true;
-	}*/
+	}
 	
 	
 	public boolean insert(Sucursal dato) {
@@ -48,6 +49,17 @@ public class Connexion {
 		WriteResult<Sucursal, String> result = coll.insert(myObject);
 		return true;
 	}
+
+	//INSERT EMPLEADO
+	public boolean insert(Empleado dato) {
+		//magia que hace el inserte
+		JacksonDBCollection<Empleado, String> coll = JacksonDBCollection.wrap(collection, Empleado.class, String.class);
+		Empleado myObject = dato;
+		WriteResult<Empleado, String> result = coll.insert(myObject);
+		return true;
+	}
+
+
 	public void mostrar() {
 		DBCursor cursor = collection.find();
 		while(cursor.hasNext()) {

@@ -4,13 +4,13 @@ public class ObraSocial {
 
     int _id;
     String nombre;
-    int numeroAfiliado;
+//    int numeroAfiliado;
 
 //    public ObraSocial(){};
 
-    public ObraSocial(String nombre,int numeroAfiliado) {
+    public ObraSocial(String nombre) {
         this.nombre=nombre;
-        this.numeroAfiliado=numeroAfiliado;
+//        this.numeroAfiliado=numeroAfiliado;
     }
 
     public int getIdObraSocial() {
@@ -29,11 +29,11 @@ public class ObraSocial {
         this.nombre = nombre;
     }
 
-    public int getNumeroAfiliado() {
-        return numeroAfiliado;
-    }
-
-    public void setNumeroAfiliado(int numeroAfiliado) {
-        this.numeroAfiliado = numeroAfiliado;
-    }
+//    public int getNumeroAfiliado() {
+//        return numeroAfiliado;
+//    }
+//
+//    public void setNumeroAfiliado(int numeroAfiliado) {
+//        this.numeroAfiliado = numeroAfiliado;
+//    }
 }
