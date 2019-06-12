@@ -7,32 +7,36 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
-import modelo.Cliente;
-import modelo.Empleado;
-import modelo.ObraSocial;
-import modelo.Sucursal;
+import modelo.*;
 
 import org.mongojack.JacksonDBCollection;
 import org.mongojack.WriteResult;
 import org.omg.CORBA.Any;
 
 public class Connexion {
+	private String nameCollection;
 	DB BaseDatos;
 	DBCollection collection;
 	BasicDBObject Document = new BasicDBObject();
-	
-	public Connexion() {
+
+	public void setNameCollection(String nameCollection) {
+		this.nameCollection = nameCollection;
+	}
+
+	public Connexion(String nameCollection) {
+		this.nameCollection=nameCollection;
 		try {
 			Mongo mongo =  new Mongo("localhost",27017);
 			BaseDatos =mongo.getDB("admin");
-			collection = BaseDatos.getCollection("Sucursal");
+			collection = BaseDatos.getCollection(this.nameCollection);
 			
 			System.out.println("conexion establecida");
 		} catch (Exception e) {
 			Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE,null,e);
 		}
 	}
-	
+
+//	INSERT CLIENTE
 	public boolean insert(Cliente dato) {
 		//magia que hace el insert
 		JacksonDBCollection<Cliente, String> coll = JacksonDBCollection.wrap(collection, Cliente.class, String.class);
@@ -41,7 +45,7 @@ public class Connexion {
 		return true;
 	}
 	
-	
+//	INSERT SUCURSAL
 	public boolean insert(Sucursal dato) {
 		//magia que hace el insert
 		JacksonDBCollection<Sucursal, String> coll = JacksonDBCollection.wrap(collection, Sucursal.class, String.class);
@@ -59,7 +63,14 @@ public class Connexion {
 		return true;
 	}
 
-
+//	INSERT VENTA
+	public boolean insert(Venta dato) {
+		//magia que hace el inserte
+		JacksonDBCollection<Venta, String> coll = JacksonDBCollection.wrap(collection, Venta.class, String.class);
+		Venta myObject = dato;
+		WriteResult<Venta, String> result = coll.insert(myObject);
+		return true;
+	}
 	public void mostrar() {
 		DBCursor cursor = collection.find();
 		while(cursor.hasNext()) {
