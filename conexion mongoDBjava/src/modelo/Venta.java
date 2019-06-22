@@ -1,27 +1,26 @@
 package modelo;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Set;
 
 public class Venta {
 
     private int id;
-    private Calendar fecha;
+    private int fecha;
     private int numeroTicker;
-    private float totalVenta;
     private String formaDePago;
-    private Set<ProductoVendido>productoVendidos;
-    private float precioTotal;
+    private int precioTotal;
+    private ArrayList<ProductoVendido> productoVendidos;
     private Empleado atencion;
     private Empleado cobroCaja;
 
-    public Venta(Calendar fecha, int numeroTicker, float totalVenta, String formaDePago, Set<ProductoVendido> productoVendidos, float precioTotal, Empleado atencion, Empleado cobroCaja) {
+    public Venta(int fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja) {
         this.fecha = fecha;
         this.numeroTicker = numeroTicker;
-        this.totalVenta = totalVenta;
         this.formaDePago = formaDePago;
         this.productoVendidos = productoVendidos;
-        this.precioTotal = precioTotal;
+        this.setPrecioTotal();
         this.atencion = atencion;
         this.cobroCaja = cobroCaja;
     }
@@ -36,13 +35,13 @@ public class Venta {
         this.id = id;
     }
 
-    public Calendar getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Calendar fecha) {
-        this.fecha = fecha;
-    }
+//    public Calendar getFecha() {
+//        return fecha;
+//    }
+//
+//    public void setFecha(Calendar fecha) {
+//        this.fecha = fecha;
+//    }
 
     public int getNumeroTicker() {
         return numeroTicker;
@@ -50,14 +49,6 @@ public class Venta {
 
     public void setNumeroTicker(int numeroTicker) {
         this.numeroTicker = numeroTicker;
-    }
-
-    public float getTotalVenta() {
-        return totalVenta;
-    }
-
-    public void setTotalVenta(float totalVenta) {
-        this.totalVenta = totalVenta;
     }
 
     public String getFormaDePago() {
@@ -68,11 +59,11 @@ public class Venta {
         this.formaDePago = formaDePago;
     }
 
-    public Set<ProductoVendido> getProductoVendidos() {
+    public ArrayList<ProductoVendido> getProductoVendidos() {
         return productoVendidos;
     }
 
-    public void setProductoVendidos(Set<ProductoVendido> productoVendidos) {
+    public void setProductoVendidos(ArrayList<ProductoVendido> productoVendidos) {
         this.productoVendidos = productoVendidos;
     }
 
@@ -80,7 +71,11 @@ public class Venta {
         return precioTotal;
     }
 
-    public void setPrecioTotal(float precioTotal) {
+    public void setPrecioTotal() {
+        int precioTotal=0;
+        for(ProductoVendido p:this.productoVendidos){
+            precioTotal+=p.getProducto().getPrecio()*p.getCantidad();
+        }
         this.precioTotal = precioTotal;
     }
 

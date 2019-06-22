@@ -1,23 +1,21 @@
 package conexionbd;
 
-import com.google.gson.Gson;
+//import com.google.gson.Gson;
 
-import modelo.Cliente;
-import modelo.Domicilio;
-import modelo.Empleado;
-import modelo.Localidad;
-import modelo.ObraSocial;
-import modelo.Provincia;
-import modelo.Sucursal;
-import modelo.Cadena;
+import modelo.*;
 import conexionbd.EmpleadosData;
 
-import static conexionbd.EmpleadosData.empleado1;
+import java.util.ArrayList;
+import java.util.Calendar;
+
+import static conexionbd.EmpleadosData.*;
+import static conexionbd.ProductosData.*;
+import static conexionbd.SucursalData.sucursal1;
 
 public class Test {
 
 	public static void main(String[] args) {
-		Connexion conexion = new Connexion();
+		Connexion conexion = new Connexion("Ventas");
 		
 //		Cliente cliente1 = new Cliente("Lionel","Messi",39000075,
 //                new Domicilio("Bolonia",2528,
@@ -40,17 +38,35 @@ public class Test {
 //                ),
 //                new ObraSocial("IOMA",33123));
 //
-//		ObraSocial obraSocial = new ObraSocial("gonza",1123);
-//		Empleado empleado1 = new Empleado("Miranda","Pablo",3900075,45454544,new Domicilio("Bolonia",2528,new Localidad("Banfield","54645"),new Provincia("Buenos aires","4654")),obraSocial);
-//		Empleado empleado2 = new Empleado("Messi","Pablo",3900075,45454544,new Domicilio("Bolonia",2528,new Localidad("Banfield","54645"),new Provincia("Buenos aires","4654")),obraSocial);
-//		Sucursal sucursal = new Sucursal("Roberto Gonzales",new Domicilio("Bolonia",2528,new Localidad("Banfield","54645"),new Provincia("Buenos aires","4654")),empleado1,new Cadena("garbaritno"));
 
-//		sucursal.getEmpleados().add(empleado1);
-//		sucursal.getEmpleados().add(empleado2);
+//		conexion.setNameCollection("sucursal_prueba"); //no funca el cambio de collection
+//		sucursal1.getEmpleados().add(empleado1);
+//		sucursal1.getEmpleados().add(empleado2);
+//		sucursal1.getEmpleados().add(empleado3);
+//		conexion.insert(sucursal1);
 
-		conexion.insert(empleado1);
-		
-//		conexion.mostrar();
+
+		ArrayList<ProductoVendido> listaProd1 = new ArrayList<ProductoVendido>();
+		ProductoVendido prod1 = new ProductoVendido(producto1, 2);
+		ProductoVendido prod2 = new ProductoVendido(producto2, 1);
+		listaProd1.add(prod1);
+		listaProd1.add(prod2);
+		Venta venta1 = new Venta(1, 1, "tarjeta", listaProd1,empleado1,empleado1);
+
+		conexion.insert(venta1);
+
+		ArrayList<ProductoVendido> listaProd2 = new ArrayList<ProductoVendido>();
+		ProductoVendido prod3 = new ProductoVendido(producto4, 3);
+		ProductoVendido prod4= new ProductoVendido(producto5, 2);
+		listaProd1.add(prod3);
+		listaProd1.add(prod4);
+		Venta venta2 = new Venta(1, 2, "tarjeta", listaProd1,empleado1,empleado1);
+
+		conexion.insert(venta2);
+
+
+
+		conexion.mostrar();
 	}
 	
 	
