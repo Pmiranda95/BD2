@@ -2,12 +2,14 @@ package modelo;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Set;
 
 public class Venta {
 
     private int id;
-    private int fecha;
+    private Date fecha;
     private int numeroTicker;
     private String formaDePago;
     private int precioTotal;
@@ -15,7 +17,7 @@ public class Venta {
     private Empleado atencion;
     private Empleado cobroCaja;
 
-    public Venta(int fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja) {
+    public Venta(Date fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja) {
         this.fecha = fecha;
         this.numeroTicker = numeroTicker;
         this.formaDePago = formaDePago;
@@ -35,13 +37,13 @@ public class Venta {
         this.id = id;
     }
 
-//    public Calendar getFecha() {
-//        return fecha;
-//    }
-//
-//    public void setFecha(Calendar fecha) {
-//        this.fecha = fecha;
-//    }
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
 
     public int getNumeroTicker() {
         return numeroTicker;
