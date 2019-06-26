@@ -10,6 +10,11 @@ db.Ventas.aggregate([
     ])
 
 
+//consulta adicional 
+
+db.Sucursal.findOne({"nombre":"nombre de la sucursal"}).ventas;
+
+
 //CONSULTA 3
 db.Ventas.aggregate([
     {$match:
