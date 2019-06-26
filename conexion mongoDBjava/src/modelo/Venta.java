@@ -16,8 +16,9 @@ public class Venta {
     private ArrayList<ProductoVendido> productoVendidos;
     private Empleado atencion;
     private Empleado cobroCaja;
+    private Cliente cliente;
 
-    public Venta(Date fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja) {
+    public Venta(Date fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja,Cliente cliente) {
         this.fecha = fecha;
         this.numeroTicker = numeroTicker;
         this.formaDePago = formaDePago;
@@ -25,6 +26,7 @@ public class Venta {
         this.setPrecioTotal();
         this.atencion = atencion;
         this.cobroCaja = cobroCaja;
+        this.cliente = cliente;
     }
 
     public  Venta(){};
@@ -95,5 +97,13 @@ public class Venta {
 
     public void setCobroCaja(Empleado cobroCaja) {
         this.cobroCaja = cobroCaja;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
