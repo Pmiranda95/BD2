@@ -12,6 +12,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
+import static conexionbd.ClientesData.cliente1;
+import static conexionbd.ClientesData.cliente2;
 import static conexionbd.EmpleadosData.*;
 import static conexionbd.ProductosData.*;
 import static conexionbd.SucursalData.sucursal1;
@@ -21,25 +23,7 @@ public class Test {
 	public static void main(String[] args) {
 		Connexion conexion = new Connexion("Ventas");
 		
-//		Cliente cliente1 = new Cliente("Lionel","Messi",39000075,
-//                new Domicilio("Bolonia",2528,
-//                        new Localidad("Banfield","54645"),
-//                        new Provincia("Buenos aires","4654")
-//                ),
-//                new ObraSocial("Osde",54654));
-//
-//        Cliente cliente2 = new Cliente("Aguero","Sergio",39223453,
-//                new Domicilio("29 de septiembre",251,
-//                        new Localidad("Lanus","1824"),
-//                        new Provincia("Buenos aires","4654")
-//                ),
-//                new ObraSocial("Osde",54655));
-//
-//        Cliente cliente3 = new Cliente("Gonzalo","Muscolo",39443242,
-//                new Domicilio("Margarita wield",1232,
-//                        new Localidad("Lanus","1824"),
-//                        new Provincia("Buenos aires","4654")
-//                ),
+
 //                new ObraSocial("IOMA",33123));
 //
 
@@ -62,7 +46,7 @@ public class Test {
 			ProductoVendido prod2 = new ProductoVendido(producto2, 1);
 			listaProd1.add(prod1);
 			listaProd1.add(prod2);
-			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,empleado1,empleado1);
+			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,empleado1,empleado1,cliente1);
 			conexion.insert(venta1);
 	/****************************************************************************************************/
 			date2= sdf2.parse(dateInString2);
@@ -71,7 +55,7 @@ public class Test {
 			ProductoVendido prod4= new ProductoVendido(producto5, 2);
 			listaProd1.add(prod3);
 			listaProd1.add(prod4);
-			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd1,empleado1,empleado1);
+			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd1,empleado1,empleado1,cliente2);
 
 			conexion.insert(venta2);
 		} catch (ParseException e) {
