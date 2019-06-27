@@ -59,15 +59,8 @@ db.Ventas.aggregate([
    { $project: {  totalMonto: { $multiply: [ "$productoVendidos.cantidad","$productoVendidos.producto.precio"] } } },
     { $sort: {totalMonto: -1}}
     
-<<<<<<< HEAD:consultas/consultas.js
    ])
 
-=======
-     { $group : { _id : "$cliente","totalProductoVendido":{$sum:"$ventas.cantidad"} }}
-    {$sort:{'totalProductoVendido':-1}}
-     
-])
->>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7:consultas/consulta6.js
 
 //consulta 4
 db.Ventas.aggregate([

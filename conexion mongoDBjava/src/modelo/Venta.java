@@ -110,10 +110,16 @@ public class Venta {
     }
 
 
-    public Sucursal getSucursal() {
-        return sucursal;
-    }
+	public Sucursal getSucursal() {
+		return sucursal;
+	}
 
-    public void setSucursal(Sucursal sucursal) {
-        this.sucursal = sucursal;
-    }}
+	public void setSucursal(Sucursal sucursal) {
+		this.sucursal = sucursal;
+	}
+
+	public void setPrecioTotal(int precioTotal) {
+		this.precioTotal = precioTotal;
+	}
+
+}
