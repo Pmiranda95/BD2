@@ -1,14 +1,16 @@
 //CONSULTA 1
 db.Ventas.aggregate([
-        {$match:{
-            $and:[
-                {fecha:{$gte:ISODate("2018-09-31"),$lt:ISODate("2019-09-31")}}
-                ]
-        }},
-        {$group: { _id: "$id", total: { $sum: "$precioTotal" } }}
-    
-    ])
-
+    {$match:
+        {
+        
+        $and: [
+            {"sucursal.nombre":{$in:["sucursal_avellaneda"]}},
+            {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
+            ]
+        }
+    }, 
+    {$group: { _id: "$id",total:{$sum:"$precioTotal"}}}
+])
 
 //consulta adicional 
 
@@ -19,8 +21,10 @@ db.Sucursal.findOne({"nombre":"nombre de la sucursal"}).ventas;
 db.Ventas.aggregate([
     {$match:
         {
-        formaDePago:"tarjeta",
+        
         $and: [
+            {"sucursal.nombre":{$in:["sucursal_avellaneda"]}},
+            { formaDePago:{$in:["tarjeta"]}},
             {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
             ]
         }
