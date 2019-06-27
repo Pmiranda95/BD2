@@ -23,12 +23,12 @@ public class Test {
 
 	public static void main(String[] args) {
 		Connexion conexion = new Connexion("Ventas");
-		Connexion conexionCliente = new Connexion("Cliente");
+		/*Connexion conexionCliente = new Connexion("Cliente");
 		Connexion conexionSucursal = new Connexion("Sucursal");
 		Connexion conexionProducto = new Connexion("Producto");
 
 		/******************************************Insertar Sucursales*********************************************************/
-		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado1);
+		/*SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado1);
 		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado2);
 		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado3);
 		
@@ -61,7 +61,7 @@ public class Test {
 			ProductoVendido prod2 = new ProductoVendido(producto2, 1);
 			listaProd1.add(prod1);
 			listaProd1.add(prod2);
-			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente1);
+			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente1,SucursalData.sucursal2);
 			conexion.insert(venta1);
 			date2= sdf2.parse(dateInString2);
 			ArrayList<ProductoVendido> listaProd2 = new ArrayList<ProductoVendido>();
@@ -69,7 +69,7 @@ public class Test {
 			ProductoVendido prod4= new ProductoVendido(producto5, 2);
 			listaProd1.add(prod3);
 			listaProd1.add(prod4);
-			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2);
+			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
 
 			conexion.insert(venta2);
 		} catch (ParseException e) {
@@ -79,7 +79,7 @@ public class Test {
 		
 		/************************************************Insertar Clientes********************************************/
 
-		conexionCliente.insertCliente(ClienteData.cliente1);
+		/*conexionCliente.insertCliente(ClienteData.cliente1);
 		conexionCliente.insertCliente(ClienteData.cliente2);
 		conexionCliente.insertCliente(ClienteData.cliente3);
 		conexionCliente.insertCliente(ClienteData.cliente4);
@@ -92,7 +92,7 @@ public class Test {
 		
 		/**********************************************Insertar Productos************************************************************************/
 		
-		conexionProducto.insert(ProductosData.producto1);
+	/*	conexionProducto.insert(ProductosData.producto1);
 		conexionProducto.insert(ProductosData.producto2);
 		conexionProducto.insert(ProductosData.producto3);
 		conexionProducto.insert(ProductosData.producto4);
@@ -103,7 +103,7 @@ public class Test {
 		conexionProducto.insert(ProductosData.producto9);
 		conexionProducto.insert(ProductosData.producto10);
 
-		
+		*/
 		//conexion.mostrar();
 	}
 	
