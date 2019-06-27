@@ -1,4 +1,4 @@
-//consulta 6
+//consulta 6 esta OK
 db.Ventas.find({})
    .projection({})
    .sort({_id:-1})
@@ -6,13 +6,16 @@ db.Ventas.find({})
    
    db.Ventas.aggregate([
     // crea un documento completo por cada element del array productoVendidos
+    {
+        $match:{fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
+    },
     { $unwind: '$productoVendidos'},
-    { $group : { _id : "$productoVendidos.producto.descripcion" } },
-    { $sort: {'productoVendidos.cantidad': -1}},
+    { $group : { _id : "$productoVendidos.producto.descripcion","totalProductoVendido":{$sum:"$productoVendidos.cantidad"} }}
+    { $sort: {'totalProductoVendido': -1}},
     
    ])
    
-//CONSULTA 8
+//CONSULTA 8 ESTA MASOMENOS
 db.Ventas.aggregate([
     {
         $match:{fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
@@ -20,7 +23,12 @@ db.Ventas.aggregate([
     {
          $unwind: "$productoVendidos"
      },
+    
+    
+     { $group : { _id : "$productoVendidos.producto.descripcion","totalProductoVendido":{$sum:"$productoVendidos.cantidad"} }}
+    {$sort:{'totalProductoVendido':-1}}
      { 
-        $group: { _id: "$id","totalCosas":{$sum:"$productoVendidos.cantidad"}} 
+        $group: { _id: "$cliente.dni"} 
     },
 ])
+
