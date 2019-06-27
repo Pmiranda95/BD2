@@ -61,3 +61,20 @@ db.Ventas.aggregate([
     
     ])
     
+//consulta 2
+db.Ventas.aggregate([
+    {
+        $match:{
+            $and:[
+                {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
+                {"sucursal.nombre":"sucursal_Lanus"}
+                ]
+            }
+    } 
+    {
+         $unwind: "$productoVendidos"
+    },
+    
+     { $group : { _id : "$cliente.obraSocial.nombre",total:{$sum:"$productoVendidos.producto.precio"}}}
+    
+    ])
