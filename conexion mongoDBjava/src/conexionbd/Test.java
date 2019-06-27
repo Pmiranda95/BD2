@@ -23,12 +23,12 @@ public class Test {
 
 	public static void main(String[] args) {
 		Connexion conexion = new Connexion("Ventas");
-		Connexion conexionCliente = new Connexion("Cliente");
+		/*Connexion conexionCliente = new Connexion("Cliente");
 		Connexion conexionSucursal = new Connexion("Sucursal");
 		Connexion conexionProducto = new Connexion("Producto");
 
 		/******************************************Insertar Sucursales*********************************************************/
-		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado1);
+		/*SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado1);
 		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado2);
 		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado3);
 		
@@ -62,7 +62,11 @@ public class Test {
 			ProductoVendido prod2 = new ProductoVendido(producto2, 1);
 			listaProd1.add(prod1);
 			listaProd1.add(prod2);
+<<<<<<< HEAD
+			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente1,SucursalData.sucursal2);
+=======
 			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
+>>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
 			conexion.insert(venta1);
 
 			date2= sdf2.parse(dateInString2);
@@ -71,7 +75,11 @@ public class Test {
 			ProductoVendido prod4= new ProductoVendido(producto5, 2);
 			listaProd1.add(prod3);
 			listaProd1.add(prod4);
+<<<<<<< HEAD
+			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
+=======
 			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd2,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
+>>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
 
 			conexion.insert(venta2);
 
@@ -423,6 +431,31 @@ public class Test {
 		
 		/************************************************Insertar Clientes********************************************/
 
+<<<<<<< HEAD
+		/*conexionCliente.insertCliente(ClienteData.cliente1);
+		conexionCliente.insertCliente(ClienteData.cliente2);
+		conexionCliente.insertCliente(ClienteData.cliente3);
+		conexionCliente.insertCliente(ClienteData.cliente4);
+		conexionCliente.insertCliente(ClienteData.cliente5);
+		conexionCliente.insertCliente(ClienteData.cliente6);
+		conexionCliente.insertCliente(ClienteData.cliente7);
+		conexionCliente.insertCliente(ClienteData.cliente8);
+		conexionCliente.insertCliente(ClienteData.cliente9);
+		conexionCliente.insertCliente(ClienteData.cliente10);
+		
+		/**********************************************Insertar Productos************************************************************************/
+		
+	/*	conexionProducto.insert(ProductosData.producto1);
+		conexionProducto.insert(ProductosData.producto2);
+		conexionProducto.insert(ProductosData.producto3);
+		conexionProducto.insert(ProductosData.producto4);
+		conexionProducto.insert(ProductosData.producto5);
+		conexionProducto.insert(ProductosData.producto6);
+		conexionProducto.insert(ProductosData.producto7);
+		conexionProducto.insert(ProductosData.producto8);
+		conexionProducto.insert(ProductosData.producto9);
+		conexionProducto.insert(ProductosData.producto10);
+=======
 //		conexionCliente.insertCliente(ClienteData.cliente1,SucursalData.sucursal1);
 //		conexionCliente.insertCliente(ClienteData.cliente2);
 //		conexionCliente.insertCliente(ClienteData.cliente3);
@@ -446,8 +479,9 @@ public class Test {
 //		conexionProducto.insert(ProductosData.producto8);
 //		conexionProducto.insert(ProductosData.producto9);
 //		conexionProducto.insert(ProductosData.producto10);
+>>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
 
-		
+		*/
 		//conexion.mostrar();
 	}
 	

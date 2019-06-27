@@ -109,6 +109,20 @@ public class Venta {
         this.cliente = cliente;
     }
 
+<<<<<<< HEAD
+	public Sucursal getSucursal() {
+		return sucursal;
+	}
+
+	public void setSucursal(Sucursal sucursal) {
+		this.sucursal = sucursal;
+	}
+
+	public void setPrecioTotal(int precioTotal) {
+		this.precioTotal = precioTotal;
+	}
+    
+=======
     public Sucursal getSucursal() {
         return sucursal;
     }
@@ -116,4 +130,5 @@ public class Venta {
     public void setSucursal(Sucursal sucursal) {
         this.sucursal = sucursal;
     }
+>>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
 }
