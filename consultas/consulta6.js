@@ -10,7 +10,7 @@ db.Ventas.find({})
         $match:{
             $and:[
                 {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
-                {"sucursal.nombre":"sucursal_Lanus"}
+                {"sucursal.nombre":"sucursal_avellaneda"}
                 ]
             }
     } ,
@@ -26,7 +26,7 @@ db.Ventas.aggregate([
         $match:{
             $and:[
                 {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
-                {"sucursal.nombre":"sucursal_Lanus"}
+                {"sucursal.nombre":"sucursal_avellaneda"}
                 ]
             }
     } 
@@ -38,7 +38,7 @@ db.Ventas.aggregate([
          $unwind: "$ventas"
      },
     
-     { $group : { _id : "$cliente.dni","totalProductoVendido":{$sum:"$ventas.cantidad"} }}
+     { $group : { _id : "$cliente","totalProductoVendido":{$sum:"$ventas.cantidad"} }}
     {$sort:{'totalProductoVendido':-1}}
      
 ])
@@ -49,7 +49,7 @@ db.Ventas.aggregate([
         $match:{
             $and:[
                 {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
-                {"sucursal.nombre":"sucursal_Lanus"}
+                {"sucursal.nombre":"sucursal_avellaneda"}
                 ]
             }
     } 
@@ -67,7 +67,7 @@ db.Ventas.aggregate([
         $match:{
             $and:[
                 {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
-                {"sucursal.nombre":"sucursal_Lanus"}
+                {"sucursal.nombre":"sucursal_avellaneda"}
                 ]
             }
     } 

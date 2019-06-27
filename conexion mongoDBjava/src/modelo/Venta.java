@@ -17,8 +17,9 @@ public class Venta {
     private Empleado atencion;
     private Empleado cobroCaja;
     private Cliente cliente;
+    private Sucursal sucursal;
 
-    public Venta(Date fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja,Cliente cliente) {
+    public Venta(Date fecha, int numeroTicker,String formaDePago, ArrayList<ProductoVendido> productoVendidos,Empleado atencion, Empleado cobroCaja,Cliente cliente,Sucursal sucursal) {
         this.fecha = fecha;
         this.numeroTicker = numeroTicker;
         this.formaDePago = formaDePago;
@@ -27,6 +28,7 @@ public class Venta {
         this.atencion = atencion;
         this.cobroCaja = cobroCaja;
         this.cliente = cliente;
+        this.sucursal = sucursal;
     }
 
     public  Venta(){};
@@ -105,5 +107,13 @@ public class Venta {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
     }
 }
