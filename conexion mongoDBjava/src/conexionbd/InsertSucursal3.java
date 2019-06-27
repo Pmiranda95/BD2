@@ -38,7 +38,7 @@ public class InsertSucursal3 {
             date1 = sdf1.parse(dateInString1);
             ArrayList<ProductoVendido> listaProd1 = new ArrayList<ProductoVendido>();
             ProductoVendido prod1 = new ProductoVendido(producto8, 2);
-            ProductoVendido prod2 = new ProductoVendido(producto5, 1);
+            ProductoVendido prod2 = new ProductoVendido(producto1, 1);
             listaProd1.add(prod1);
             listaProd1.add(prod2);
             Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente2,SucursalData.sucursal3);
@@ -46,8 +46,8 @@ public class InsertSucursal3 {
 
             date2= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd2 = new ArrayList<ProductoVendido>();
-            ProductoVendido prod3 = new ProductoVendido(producto5, 3);
-            ProductoVendido prod4= new ProductoVendido(producto8, 2);
+            ProductoVendido prod3 = new ProductoVendido(producto1, 3);
+            ProductoVendido prod4= new ProductoVendido(producto3, 2);
             listaProd1.add(prod3);
             listaProd1.add(prod4);
             Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd2,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente2,SucursalData.sucursal3);
@@ -59,8 +59,8 @@ public class InsertSucursal3 {
             Date date3;
             date3= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd3 = new ArrayList<ProductoVendido>();
-            ProductoVendido prod5 = new ProductoVendido(producto2, 2);
-            ProductoVendido prod6= new ProductoVendido(producto5, 1);
+            ProductoVendido prod5 = new ProductoVendido(producto9, 2);
+            ProductoVendido prod6= new ProductoVendido(producto1, 1);
             listaProd3.add(prod3);
             listaProd3.add(prod4);
             Venta venta3 = new Venta(date3, 2, "tarjeta", listaProd3,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente3,SucursalData.sucursal3);
@@ -73,8 +73,8 @@ public class InsertSucursal3 {
             Date date4;
             date4= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd4 = new ArrayList<ProductoVendido>();
-            ProductoVendido prod7 = new ProductoVendido(producto2, 2);
-            ProductoVendido prod8= new ProductoVendido(producto5, 1);
+            ProductoVendido prod7 = new ProductoVendido(producto9, 2);
+            ProductoVendido prod8= new ProductoVendido(producto2, 1);
             listaProd4.add(prod7);
             listaProd4.add(prod8);
             Venta venta4 = new Venta(date4, 2, "efectivo", listaProd4,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
@@ -88,7 +88,7 @@ public class InsertSucursal3 {
             date5= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd5 = new ArrayList<ProductoVendido>();
             listaProd5.add(new ProductoVendido(producto8, 2));
-            listaProd5.add(new ProductoVendido(producto4, 1));
+            listaProd5.add(new ProductoVendido(producto6, 1));
             Venta venta5 = new Venta(date5, 2, "efectivo", listaProd5,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente3,SucursalData.sucursal3);
 
             conexion.insert(venta5);
@@ -100,7 +100,7 @@ public class InsertSucursal3 {
             date6= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd6 = new ArrayList<ProductoVendido>();
             listaProd6.add(new ProductoVendido(producto6, 2));
-            listaProd6.add(new ProductoVendido(producto5, 1));
+            listaProd6.add(new ProductoVendido(producto7, 1));
             Venta venta6 = new Venta(date6, 2, "tarjeta", listaProd6,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
             conexion.insert(venta6);
@@ -111,8 +111,8 @@ public class InsertSucursal3 {
             Date date7;
             date7= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd7 = new ArrayList<ProductoVendido>();
-            listaProd7.add(new ProductoVendido(producto2, 2));
-            listaProd7.add(new ProductoVendido(producto8, 1));
+            listaProd7.add(new ProductoVendido(producto9, 2));
+            listaProd7.add(new ProductoVendido(producto5, 1));
             Venta venta7 = new Venta(date7, 2, "tarjeta", listaProd7,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente4,SucursalData.sucursal3);
 
             conexion.insert(venta7);
@@ -124,7 +124,7 @@ public class InsertSucursal3 {
             date8= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd8 = new ArrayList<ProductoVendido>();
             listaProd8.add(new ProductoVendido(producto8, 2));
-            listaProd8.add(new ProductoVendido(producto1, 1));
+            listaProd8.add(new ProductoVendido(producto10, 1));
             Venta venta8 = new Venta(date8, 2, "tarjeta", listaProd8,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
             conexion.insert(venta8);
@@ -136,7 +136,7 @@ public class InsertSucursal3 {
             date9= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd9 = new ArrayList<ProductoVendido>();
             listaProd9.add(new ProductoVendido(producto8, 2));
-            listaProd9.add(new ProductoVendido(producto3, 1));
+            listaProd9.add(new ProductoVendido(producto7, 1));
             Venta venta9 = new Venta(date9, 2, "tarjeta", listaProd9,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente5,SucursalData.sucursal3);
 
             conexion.insert(venta9);
@@ -147,7 +147,7 @@ public class InsertSucursal3 {
             Date date10;
             date10= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd10 = new ArrayList<ProductoVendido>();
-            listaProd10.add(new ProductoVendido(producto5, 2));
+            listaProd10.add(new ProductoVendido(producto1, 2));
             listaProd10.add(new ProductoVendido(producto8, 1));
             Venta venta10 = new Venta(date10, 2, "tarjeta", listaProd10,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
@@ -160,7 +160,7 @@ public class InsertSucursal3 {
             date11= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd11 = new ArrayList<ProductoVendido>();
             listaProd11.add(new ProductoVendido(producto7, 2));
-            listaProd11.add(new ProductoVendido(producto5, 1));
+            listaProd11.add(new ProductoVendido(producto1, 1));
             Venta venta11 = new Venta(date11, 2, "tarjeta", listaProd11,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente5,SucursalData.sucursal3);
 
             conexion.insert(venta11);
@@ -171,7 +171,7 @@ public class InsertSucursal3 {
             Date date12;
             date12= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd12 = new ArrayList<ProductoVendido>();
-            listaProd12.add(new ProductoVendido(producto8, 2));
+            listaProd12.add(new ProductoVendido(producto3, 2));
             listaProd12.add(new ProductoVendido(producto9, 1));
             Venta venta12 = new Venta(date12, 2, "tarjeta", listaProd12,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente2,SucursalData.sucursal3);
 
@@ -183,7 +183,7 @@ public class InsertSucursal3 {
             Date date13;
             date13= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd13 = new ArrayList<ProductoVendido>();
-            listaProd13.add(new ProductoVendido(producto5, 2));
+            listaProd13.add(new ProductoVendido(producto1, 2));
             listaProd13.add(new ProductoVendido(producto10, 1));
             Venta venta13 = new Venta(date13, 2, "tarjeta", listaProd13,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente2,SucursalData.sucursal3);
 
@@ -195,7 +195,7 @@ public class InsertSucursal3 {
             Date date14;
             date14= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd14 = new ArrayList<ProductoVendido>();
-            listaProd14.add(new ProductoVendido(producto7, 2));
+            listaProd14.add(new ProductoVendido(producto4, 2));
             listaProd14.add(new ProductoVendido(producto8, 1));
             Venta venta14 = new Venta(date14, 2, "tarjeta", listaProd14,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente3,SucursalData.sucursal3);
 
@@ -208,7 +208,7 @@ public class InsertSucursal3 {
             date15= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd15 = new ArrayList<ProductoVendido>();
             listaProd15.add(new ProductoVendido(producto6, 2));
-            listaProd15.add(new ProductoVendido(producto4, 1));
+            listaProd15.add(new ProductoVendido(producto3, 1));
             Venta venta15 = new Venta(date15, 2, "tarjeta", listaProd15,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente3,SucursalData.sucursal3);
 
             conexion.insert(venta15);
@@ -219,8 +219,8 @@ public class InsertSucursal3 {
             Date date16;
             date16= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd16 = new ArrayList<ProductoVendido>();
-            listaProd16.add(new ProductoVendido(producto2, 2));
-            listaProd16.add(new ProductoVendido(producto5, 1));
+            listaProd16.add(new ProductoVendido(producto9, 2));
+            listaProd16.add(new ProductoVendido(producto1, 1));
             Venta venta16 = new Venta(date16, 2, "efectivo", listaProd16,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente5,SucursalData.sucursal3);
 
             conexion.insert(venta16);
@@ -244,7 +244,7 @@ public class InsertSucursal3 {
             date18= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd18 = new ArrayList<ProductoVendido>();
             listaProd18.add(new ProductoVendido(producto8, 2));
-            listaProd18.add(new ProductoVendido(producto5, 1));
+            listaProd18.add(new ProductoVendido(producto10, 1));
             Venta venta18 = new Venta(date18, 2, "efectivo", listaProd18,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente2,SucursalData.sucursal3);
 
             conexion.insert(venta18);
@@ -255,7 +255,7 @@ public class InsertSucursal3 {
             Date date19;
             date19= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd19 = new ArrayList<ProductoVendido>();
-            listaProd19.add(new ProductoVendido(producto5, 2));
+            listaProd19.add(new ProductoVendido(producto1, 2));
             listaProd19.add(new ProductoVendido(producto7, 1));
             Venta venta19 = new Venta(date19, 2, "efectivo", listaProd19,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
@@ -268,7 +268,7 @@ public class InsertSucursal3 {
             date20= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd20 = new ArrayList<ProductoVendido>();
             listaProd20.add(new ProductoVendido(producto8, 2));
-            listaProd20.add(new ProductoVendido(producto3, 1));
+            listaProd20.add(new ProductoVendido(producto2, 1));
             Venta venta20 = new Venta(date20, 2, "tarjeta", listaProd20,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
             conexion.insert(venta20);
@@ -279,7 +279,7 @@ public class InsertSucursal3 {
             Date date21;
             date21= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd21 = new ArrayList<ProductoVendido>();
-            listaProd21.add(new ProductoVendido(producto8, 2));
+            listaProd21.add(new ProductoVendido(producto4, 2));
             listaProd21.add(new ProductoVendido(producto7, 1));
             Venta venta21 = new Venta(date21, 2, "tarjeta", listaProd21,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente2,SucursalData.sucursal3);
 
@@ -291,8 +291,8 @@ public class InsertSucursal3 {
             Date date22;
             date22= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd22 = new ArrayList<ProductoVendido>();
-            listaProd22.add(new ProductoVendido(producto5, 2));
-            listaProd22.add(new ProductoVendido(producto2, 1));
+            listaProd22.add(new ProductoVendido(producto1, 2));
+            listaProd22.add(new ProductoVendido(producto9, 1));
             Venta venta22 = new Venta(date22, 2, "tarjeta", listaProd22,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente7,SucursalData.sucursal3);
 
             conexion.insert(venta22);
@@ -304,7 +304,7 @@ public class InsertSucursal3 {
             date23= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd23 = new ArrayList<ProductoVendido>();
             listaProd23.add(new ProductoVendido(producto8, 2));
-            listaProd23.add(new ProductoVendido(producto5, 1));
+            listaProd23.add(new ProductoVendido(producto1, 1));
             Venta venta23 = new Venta(date23, 2, "tarjeta", listaProd23,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente7,SucursalData.sucursal3);
 
             conexion.insert(venta23);
@@ -316,7 +316,7 @@ public class InsertSucursal3 {
             date24= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd24 = new ArrayList<ProductoVendido>();
             listaProd24.add(new ProductoVendido(producto8, 2));
-            listaProd24.add(new ProductoVendido(producto5, 1));
+            listaProd24.add(new ProductoVendido(producto1, 1));
             Venta venta24 = new Venta(date24, 2, "tarjeta", listaProd24,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente5,SucursalData.sucursal3);
 
             conexion.insert(venta24);
@@ -328,7 +328,7 @@ public class InsertSucursal3 {
             date25= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd25 = new ArrayList<ProductoVendido>();
             listaProd25.add(new ProductoVendido(producto8, 2));
-            listaProd25.add(new ProductoVendido(producto2, 1));
+            listaProd25.add(new ProductoVendido(producto9, 1));
             Venta venta25 = new Venta(date25, 2, "tarjeta", listaProd25,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente5,SucursalData.sucursal3);
 
             conexion.insert(venta25);
@@ -339,7 +339,7 @@ public class InsertSucursal3 {
             Date date26;
             date26= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd26 = new ArrayList<ProductoVendido>();
-            listaProd26.add(new ProductoVendido(producto5, 2));
+            listaProd26.add(new ProductoVendido(producto1, 2));
             listaProd26.add(new ProductoVendido(producto6, 1));
             Venta venta26 = new Venta(date26, 2, "tarjeta", listaProd26,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
@@ -351,7 +351,7 @@ public class InsertSucursal3 {
             Date date27;
             date27= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd27 = new ArrayList<ProductoVendido>();
-            listaProd27.add(new ProductoVendido(producto1, 2));
+            listaProd27.add(new ProductoVendido(producto10, 2));
             listaProd27.add(new ProductoVendido(producto8, 1));
             Venta venta27 = new Venta(date27, 2, "tarjeta", listaProd27,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente1,SucursalData.sucursal3);
 
@@ -364,7 +364,7 @@ public class InsertSucursal3 {
             date28= sdf2.parse(dateInString2);
             ArrayList<ProductoVendido> listaProd28 = new ArrayList<ProductoVendido>();
             listaProd28.add(new ProductoVendido(producto8, 2));
-            listaProd28.add(new ProductoVendido(producto5, 1));
+            listaProd28.add(new ProductoVendido(producto1, 1));
             Venta venta28 = new Venta(date28, 2, "tarjeta", listaProd28,EmpleadosData.empleado8,EmpleadosData.empleado8,ClienteData.cliente8,SucursalData.sucursal3);
 
             conexion.insert(venta28);

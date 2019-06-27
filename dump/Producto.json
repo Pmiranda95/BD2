@@ -1,0 +1,10 @@
+{"_id":{"$oid":"5d142ef175b0a7660e102808"},"id":0,"descripcion":"ibuprofeno","laboratorio":"bayer","codigo":1,"precio":10,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e102809"},"id":0,"descripcion":"cafiaspirina","laboratorio":"bayer","codigo":2,"precio":12,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e10280a"},"id":0,"descripcion":"atomo","laboratorio":"borrussia","codigo":3,"precio":50,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e10280b"},"id":0,"descripcion":"ACENAM","laboratorio":"bayer","codigo":4,"precio":25,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e10280c"},"id":0,"descripcion":"ACETATO","laboratorio":"borussia","codigo":5,"precio":11,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e10280d"},"id":0,"descripcion":"ASPIRINA","laboratorio":"bayer","codigo":6,"precio":70,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e10280e"},"id":0,"descripcion":"omeprazol","laboratorio":"bayer","codigo":7,"precio":100,"tipo":"medicamento"}
+{"_id":{"$oid":"5d142ef175b0a7660e10280f"},"id":0,"descripcion":"one million","laboratorio":"carolina herrara","codigo":8,"precio":2000,"tipo":"perfumeria"}
+{"_id":{"$oid":"5d142ef175b0a7660e102810"},"id":0,"descripcion":"212","laboratorio":"carolina herrera","codigo":9,"precio":20212,"tipo":"perfumeria"}
+{"_id":{"$oid":"5d142ef175b0a7660e102811"},"id":0,"descripcion":"colonia pibes","laboratorio":"dia","codigo":8,"precio":5000,"tipo":"perfumeria"}

@@ -62,11 +62,8 @@ public class Test {
 			ProductoVendido prod2 = new ProductoVendido(producto2, 1);
 			listaProd1.add(prod1);
 			listaProd1.add(prod2);
-<<<<<<< HEAD
 			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente1,SucursalData.sucursal2);
-=======
-			Venta venta1 = new Venta(date1, 1, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
->>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
+
 			conexion.insert(venta1);
 
 			date2= sdf2.parse(dateInString2);
@@ -75,11 +72,8 @@ public class Test {
 			ProductoVendido prod4= new ProductoVendido(producto5, 2);
 			listaProd1.add(prod3);
 			listaProd1.add(prod4);
-<<<<<<< HEAD
 			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd1,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
-=======
-			Venta venta2 = new Venta(date2, 2, "tarjeta", listaProd2,EmpleadosData.empleado1,EmpleadosData.empleado1,ClienteData.cliente2,SucursalData.sucursal1);
->>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
+
 
 			conexion.insert(venta2);
 
@@ -431,7 +425,6 @@ public class Test {
 		
 		/************************************************Insertar Clientes********************************************/
 
-<<<<<<< HEAD
 		/*conexionCliente.insertCliente(ClienteData.cliente1);
 		conexionCliente.insertCliente(ClienteData.cliente2);
 		conexionCliente.insertCliente(ClienteData.cliente3);
@@ -455,7 +448,7 @@ public class Test {
 		conexionProducto.insert(ProductosData.producto8);
 		conexionProducto.insert(ProductosData.producto9);
 		conexionProducto.insert(ProductosData.producto10);
-=======
+
 //		conexionCliente.insertCliente(ClienteData.cliente1,SucursalData.sucursal1);
 //		conexionCliente.insertCliente(ClienteData.cliente2);
 //		conexionCliente.insertCliente(ClienteData.cliente3);
@@ -479,9 +472,7 @@ public class Test {
 //		conexionProducto.insert(ProductosData.producto8);
 //		conexionProducto.insert(ProductosData.producto9);
 //		conexionProducto.insert(ProductosData.producto10);
->>>>>>> 34fbce0ec2fe052d638e253442fc8c1a56d6cae7
 
-		*/
 		//conexion.mostrar();
 	}
 	
