@@ -23,12 +23,12 @@ public class Test {
 
 	public static void main(String[] args) {
 		Connexion conexion = new Connexion("Ventas");
-		/*Connexion conexionCliente = new Connexion("Cliente");
+		Connexion conexionCliente = new Connexion("Cliente");
 		Connexion conexionSucursal = new Connexion("Sucursal");
 		Connexion conexionProducto = new Connexion("Producto");
 
 		/******************************************Insertar Sucursales*********************************************************/
-		/*SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado1);
+		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado1);
 		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado2);
 		SucursalData.sucursal1.getEmpleados().add(EmpleadosData.empleado3);
 		
@@ -40,9 +40,9 @@ public class Test {
 		SucursalData.sucursal3.getEmpleados().add(EmpleadosData.empleado8);
 		SucursalData.sucursal3.getEmpleados().add(EmpleadosData.empleado9);
 		
-//		conexionSucursal.insert(SucursalData.sucursal1);
-//		conexionSucursal.insert(SucursalData.sucursal2);
-//		conexionSucursal.insert(SucursalData.sucursal3);
+		conexionSucursal.insert(SucursalData.sucursal1);
+		conexionSucursal.insert(SucursalData.sucursal2);
+		conexionSucursal.insert(SucursalData.sucursal3);
 		
 		
 		
@@ -427,7 +427,7 @@ public class Test {
 		
 		/************************************************Insertar Clientes********************************************/
 
-		/*conexionCliente.insertCliente(ClienteData.cliente1);
+		conexionCliente.insertCliente(ClienteData.cliente1);
 		conexionCliente.insertCliente(ClienteData.cliente2);
 		conexionCliente.insertCliente(ClienteData.cliente3);
 		conexionCliente.insertCliente(ClienteData.cliente4);
@@ -440,7 +440,7 @@ public class Test {
 		
 		/**********************************************Insertar Productos************************************************************************/
 		
-	/*	conexionProducto.insert(ProductosData.producto1);
+		conexionProducto.insert(ProductosData.producto1);
 		conexionProducto.insert(ProductosData.producto2);
 		conexionProducto.insert(ProductosData.producto3);
 		conexionProducto.insert(ProductosData.producto4);
@@ -451,29 +451,6 @@ public class Test {
 		conexionProducto.insert(ProductosData.producto9);
 		conexionProducto.insert(ProductosData.producto10);
 
-//		conexionCliente.insertCliente(ClienteData.cliente1,SucursalData.sucursal1);
-//		conexionCliente.insertCliente(ClienteData.cliente2);
-//		conexionCliente.insertCliente(ClienteData.cliente3);
-//		conexionCliente.insertCliente(ClienteData.cliente4);
-//		conexionCliente.insertCliente(ClienteData.cliente5);
-//		conexionCliente.insertCliente(ClienteData.cliente6);
-//		conexionCliente.insertCliente(ClienteData.cliente7);
-//		conexionCliente.insertCliente(ClienteData.cliente8);
-//		conexionCliente.insertCliente(ClienteData.cliente9);
-//		conexionCliente.insertCliente(ClienteData.cliente1,SucursalData.sucursal10);
-		
-		/**********************************************Insertar Productos************************************************************************/
-		
-//		conexionProducto.insert(ProductosData.producto1);
-//		conexionProducto.insert(ProductosData.producto2);
-//		conexionProducto.insert(ProductosData.producto3);
-//		conexionProducto.insert(ProductosData.producto4);
-//		conexionProducto.insert(ProductosData.producto5);
-//		conexionProducto.insert(ProductosData.producto6);
-//		conexionProducto.insert(ProductosData.producto7);
-//		conexionProducto.insert(ProductosData.producto8);
-//		conexionProducto.insert(ProductosData.producto9);
-//		conexionProducto.insert(ProductosData.producto10);
 
 		//conexion.mostrar();
 	}
