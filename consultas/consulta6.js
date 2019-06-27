@@ -7,8 +7,13 @@ db.Ventas.find({})
    db.Ventas.aggregate([
     // crea un documento completo por cada element del array productoVendidos
     {
-        $match:{fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
-    },
+        $match:{
+            $and:[
+                {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
+                {"sucursal.nombre":"sucursal_Lanus"}
+                ]
+            }
+    } ,
     { $unwind: '$productoVendidos'},
     { $group : { _id : "$productoVendidos.producto.descripcion","totalProductoVendido":{$sum:"$productoVendidos.cantidad"} }}
     { $sort: {'totalProductoVendido': -1}},
@@ -18,8 +23,13 @@ db.Ventas.find({})
 //CONSULTA 8 ESTA OK
 db.Ventas.aggregate([
     {
-        $match:{fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
-    }, 
+        $match:{
+            $and:[
+                {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
+                {"sucursal.nombre":"sucursal_Lanus"}
+                ]
+            }
+    } 
     
     { 
         $project: { _id: "$cliente.dni",cliente:"$cliente",ventas:"$productoVendidos"} 
@@ -33,3 +43,21 @@ db.Ventas.aggregate([
      
 ])
 
+//consulta 4
+db.Ventas.aggregate([
+    {
+        $match:{
+            $and:[
+                {fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}},
+                {"sucursal.nombre":"sucursal_Lanus"}
+                ]
+            }
+    } 
+    {
+         $unwind: "$productoVendidos"
+    },
+    
+     { $group : { _id : "$productoVendidos.producto.tipo",total:{$sum:"$productoVendidos.producto.precio"}}}
+    
+    ])
+    
