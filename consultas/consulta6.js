@@ -10,5 +10,17 @@ db.Ventas.find({})
     { $group : { _id : "$productoVendidos.producto.descripcion" } },
     { $sort: {'productoVendidos.cantidad': -1}},
     
-   ]
-)
+   ])
+   
+//CONSULTA 8
+db.Ventas.aggregate([
+    {
+        $match:{fecha:{$gte:ISODate("2018-03-31"),$lt:ISODate('2019-09-31')}}
+    }, 
+    {
+         $unwind: "$productoVendidos"
+     },
+     { 
+        $group: { _id: "$id","totalCosas":{$sum:"$productoVendidos.cantidad"}} 
+    },
+])
