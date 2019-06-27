@@ -37,7 +37,7 @@ public class Connexion {
 	}
 
 //	INSERT CLIENTE
-	public boolean insert(Cliente dato) {
+	public boolean insertCliente(Cliente dato) {
 		//magia que hace el insert
 		JacksonDBCollection<Cliente, String> coll = JacksonDBCollection.wrap(collection, Cliente.class, String.class);
 		Cliente myObject = dato;
@@ -71,6 +71,18 @@ public class Connexion {
 		WriteResult<Venta, String> result = coll.insert(myObject);
 		return true;
 	}
+	
+	
+//	INSERT PRODUCTO
+	public boolean insert(Producto dato) {
+		//magia que hace el inserte
+		JacksonDBCollection<Producto, String> coll = JacksonDBCollection.wrap(collection, Producto.class, String.class);
+		Producto myObject = dato;
+		WriteResult<Producto, String> result = coll.insert(myObject);
+		return true;
+	}
+	
+	
 	public void mostrar() {
 		DBCursor cursor = collection.find();
 		while(cursor.hasNext()) {
