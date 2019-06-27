@@ -9,7 +9,9 @@ public class Cliente {
     private Domicilio domicilio;
     private ObraSocial obraSocial;
 
-    
+    public Cliente() {
+    	
+    }
 
     public Cliente(String apellido, String nombre, int dni, Domicilio domicilio, ObraSocial obraSocial) {
 		super();

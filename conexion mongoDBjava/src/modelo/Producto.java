@@ -6,11 +6,11 @@ public class Producto {
     private String laboratorio;
     private int codigo;
     private  int precio;
-    private  int tipo;//poner enum por (perfumeria o farmacia)
+    private  String tipo;//poner enum por (perfumeria o farmacia)
 
     public Producto(){};
 
-    public Producto(String descripcion, String laboratorio, int codigo, int precio, int tipo) {
+    public Producto(String descripcion, String laboratorio, int codigo, int precio, String tipo) {
         this.descripcion = descripcion;
         this.laboratorio = laboratorio;
         this.codigo = codigo;
@@ -58,11 +58,11 @@ public class Producto {
         this.precio = precio;
     }
 
-    public int getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(int tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 }

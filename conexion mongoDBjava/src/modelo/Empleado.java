@@ -8,14 +8,16 @@ public class Empleado {
     private long cuit;
     private Domicilio domicilio;
     private ObraSocial obraSocial;
+    private String Categoria;
 
-    public Empleado(String apellido, String nombre, int dni, long cuit, Domicilio domicilio, ObraSocial obraSocial) {
+    public Empleado(String apellido, String nombre, int dni, long cuit, Domicilio domicilio, ObraSocial obraSocial,String Categoria) {
         this.apellido = apellido;
         this.nombre = nombre;
         this.dni = dni;
         this.cuit = cuit;
         this.domicilio = domicilio;
         this.obraSocial = obraSocial;
+        this.Categoria = Categoria;
     }
 
     public int getId() {
@@ -73,4 +75,13 @@ public class Empleado {
     public void setObraSocial(ObraSocial obraSocial) {
         this.obraSocial = obraSocial;
     }
+
+	public String getCategoria() {
+		return Categoria;
+	}
+
+	public void setCategoria(String categoria) {
+		Categoria = categoria;
+	}
+    
 }
